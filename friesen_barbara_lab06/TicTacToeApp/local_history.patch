@@ -1,0 +1,89 @@
+Index: app/src/main/java/emke/comp2161/tictactoeapp/OptionAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/emke/comp2161/tictactoeapp/OptionAdapter.java b/app/src/main/java/emke/comp2161/tictactoeapp/OptionAdapter.java
+--- a/app/src/main/java/emke/comp2161/tictactoeapp/OptionAdapter.java	
++++ b/app/src/main/java/emke/comp2161/tictactoeapp/OptionAdapter.java	(date 1669248286758)
+@@ -6,6 +6,7 @@
+ import android.view.View;
+ import android.view.ViewGroup;
+ import android.widget.TextView;
++import android.widget.Toast;
+ 
+ import androidx.annotation.NonNull;
+ import androidx.recyclerview.widget.RecyclerView;
+@@ -13,13 +14,22 @@
+ import java.util.List;
+ 
+ public class OptionAdapter extends RecyclerView.Adapter<OptionAdapter.MyViewHolder> {
++
++    public interface OnItemClickListener {
++        void onClick(View v, int position);
++
++        void onItemClick(String s);
++    }
++
+     Context context;
+     private List<String> option_list;
++    private OnItemClickListener listener;
+ 
+     //Constructor for OptionAdapter
+-    public OptionAdapter(Context context, List<String> option_list){
++    public OptionAdapter(Context context, List<String> option_list, OnItemClickListener clickListener){
+         this.context = context;
+         this.option_list = option_list;
++        this.listener = clickListener;
+     }
+ 
+     //Inflates the view using our defined layout "option_row"
+@@ -33,21 +43,7 @@
+ 
+     @Override
+     public void onBindViewHolder(@NonNull OptionAdapter.MyViewHolder holder, int position) {
+-        holder.option.setText(option_list.get(position));
+-        holder.option.setOnClickListener(v ->{
+-            if(position == 0){
+-
+-            }
+-            else if(position ==1){
+-                Intent intent = new Intent(context, NameEntryActivity.class);
+-                context.startActivity(intent);
+-
+-            }
+-            else if(position ==2){
+-                Intent intent = new Intent(context, StandingsActivity.class);
+-                context.startActivity(intent);
+-            }
+-        });
++        holder.bind(option_list.get(position), listener);
+     }
+ 
+     @Override
+@@ -55,8 +51,9 @@
+         return option_list.size();
+     }
+ 
++
+     //Creates the view based on the contents of the option_list Array List
+-    public static class MyViewHolder extends RecyclerView.ViewHolder{
++    public class MyViewHolder extends RecyclerView.ViewHolder{
+ 
+         TextView option;
+ 
+@@ -65,5 +62,14 @@
+ 
+             option = itemView.findViewById(R.id.option);
+         }
++
++        public void bind(String s, OnItemClickListener listener) {
++            option.setText(s);
++            itemView.setOnClickListener(new View.OnClickListener() {
++                @Override public void onClick(View v) {
++                    listener.onItemClick(s);
++                }
++            });
++        }
+     }
+ }

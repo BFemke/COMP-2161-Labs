@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Security Token</string>
+    <string name="passCode">PASS CODE</string>
+    <string name="verifyBttn">Verify</string>
+    <string name="clearBttn">Clear</string>
+    <string name="backBttn">Back</string>
+</resources>

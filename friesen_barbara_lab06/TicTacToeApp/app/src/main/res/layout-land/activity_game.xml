@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9D3D0"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:fontFamily="monospace"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/playerTurn"
+        app:layout_constraintStart_toStartOf="@id/playerTurn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:fontFamily="monospace"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/player_turn"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/board"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameName" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/board"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/board_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playerTurn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                android:id="@+id/horizontal1"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/horizontal2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/horizontal2"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal1"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/vertical1"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/vertical2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="32dp" />
+
+            <View
+                android:id="@+id/vertical2"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/vertical1"
+                tools:layout_editor_absoluteY="32dp" />
+
+            <ImageButton
+                android:id="@+id/cellOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/one"
+                android:padding="7dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal1"
+                app:layout_constraintEnd_toStartOf="@id/vertical1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/two"
+                android:padding="7dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal1"
+                app:layout_constraintEnd_toStartOf="@id/vertical2"
+                app:layout_constraintStart_toEndOf="@id/vertical1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/three"
+                android:padding="7dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vertical2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/four"
+                android:padding="7dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal2"
+                app:layout_constraintEnd_toStartOf="@id/vertical1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal1"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/five"
+                android:padding="7dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal2"
+                app:layout_constraintEnd_toStartOf="@id/vertical2"
+                app:layout_constraintStart_toEndOf="@id/vertical1"
+                app:layout_constraintTop_toBottomOf="@id/horizontal1"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/six"
+                android:padding="7dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vertical2"
+                app:layout_constraintTop_toBottomOf="@id/horizontal1"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/seven"
+                android:padding="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/vertical1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal2"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/eight"
+                android:padding="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/vertical2"
+                app:layout_constraintStart_toEndOf="@id/vertical1"
+                app:layout_constraintTop_toBottomOf="@id/horizontal2"
+                app:srcCompat="@drawable/empty_style" />
+
+            <ImageButton
+                android:id="@+id/cellNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:contentDescription="@string/nine"
+                android:padding="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vertical2"
+                app:layout_constraintTop_toBottomOf="@id/horizontal2"
+                app:srcCompat="@drawable/empty_style" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/restartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_style"
+        android:fontFamily="monospace"
+        android:text="@string/restart_btn"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/backBtn"
+        app:layout_constraintEnd_toEndOf="@id/playerTurn"
+        app:layout_constraintStart_toStartOf="@id/playerTurn"
+        app:layout_constraintTop_toBottomOf="@id/playerTurn" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_style"
+        android:fontFamily="monospace"
+        android:text="@string/back_btn"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/restartBtn"
+        app:layout_constraintStart_toStartOf="@id/restartBtn"
+        app:layout_constraintTop_toBottomOf="@id/restartBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

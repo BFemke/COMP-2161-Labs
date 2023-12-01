@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Simple Tour Guide App</string>
+
+    <string-array name="cities">
+        <item>Calgary</item>
+        <item>Toronto</item>
+        <item>Edmonton</item>
+        <item>Vancouver</item>
+        <item>Quebec</item>
+        <item>Victoria</item>
+    </string-array>
+
+    <string name="welcome">Welcome to my tour guide app!!</string>
+    <string name="Calgary">The physical setting of Calgary distinguishes it from other cities of the Prairie
+        Provinces. It is situated on the western edge of the Great Plains, in the foothills of the
+        spectacular Canadian Rockies (about 60 miles [100 km] to the west), and the surrounding
+        valleys and uplands are a distinct change from the flat prairie landscapes typical of the
+        region. A relatively young Canadian city, it is the administrative and financial
+        headquarters of the country’s petroleum industry. Calgary also celebrates its history as a
+        cattle-ranching capital, an image enhanced by the city’s hosting of the annual Calgary
+        Stampede, a 10-day rodeo-centred event. In the early 21st century, Calgary was one of the
+        fastest-growing cities in Canada.</string>
+    <string name="Toronto">Canada’s most populous metropolitan area, it lies on the northern shore
+        of Lake Ontario. Originally inhabited by Seneca tribes, its site was occupied by a tiny
+        French fort in the mid-18th century. It was founded in 1793 as York by American colonists
+        loyal to the British. U.S. troops pillaged it during the War of 1812. In 1834 it received
+        its city charter and current name. It became the capital of Ontario in 1867. In 1953–54 it
+        joined neighbouring villages, towns, and townships to form the Municipality of Metropolitan
+        Toronto. In 1967 those 13 municipalities were reduced to six (Toronto, Etobicoke, North
+        York, Scarborough, York, and the borough of East York), which amalgamated to form the City
+        of Toronto in 1998. It is Canada’s financial and commercial centre, the seat of the Toronto
+        Stock Exchange, and a major international trading centre, with access to Atlantic shipping
+        via the Saint Lawrence Seaway and to major U.S. ports via the Great Lakes. It produces more
+        than half of Canada’s manufactured goods. Extensive immigration (1950s–70s) brought a
+        variety of foreign cultures that transformed it into one of the liveliest cities on the
+        continent. It is the site of the CN Tower (1,815 ft [553 m] tall), the Hockey Hall of Fame,
+        and the annual Canadian National Exhibition. Its educational institutions include the
+        University of Toronto (1827).</string>
+    <string name="Edmonton">Located on the North Saskatchewan River in the centre of the province,
+        it began as a series of fur-trading posts built from 1795. With the arrival of the railway
+        and an influx of settlers in the late 19th century, Edmonton began to prosper economically,
+        and in 1905 it became the capital of the new province of Alberta. The 1947 discovery of
+        petroleum in the area greatly stimulated the city’s growth; an agricultural and oil-based
+        economy still prevails. It is the distribution centre of northwestern Canada. Its cultural
+        and educational institutions include the University of Alberta (1906).</string>
+    <string name="Vancouver">It is the major urban centre of western Canada and the focus of one of
+        the country’s most populous metropolitan regions. Vancouver lies between Burrard Inlet (an
+        arm of the Strait of Georgia) to the north and the Fraser River delta to the south,
+        opposite Vancouver Island. The city is just north of the U.S. state of Washington. It has a
+        fine natural harbour on a superb site facing the sea and mountains.</string>
+    <string name="Quebec">It lies at the confluence of the St. Lawrence and St. Charles rivers,
+        about 150 mi (240 km) northeast of Montreal, on a rocky promontory above the rivers.
+        Canada’s oldest city, it was settled by the French in 1608 as a trading post. It was the
+        capital of New France from 1663 to 1763, when it was lost to the British. It was the
+        capital of Lower Canada 1791–1841 and Canada East 1841–67. It became the provincial capital
+        in 1867. Most of the population is French speaking and Roman Catholic. It is the site of
+        Laval University and other colleges and cultural institutions. Manufactures include
+        newsprint, milled grain, cigarettes, and clothing. Shipbuilding and tourism are important
+        industries.</string>
+    <string name="Victoria"> It is located on the southeastern tip of Vancouver Island, overlooking
+        Juan de Fuca Strait. It was founded in 1843 by the Hudson’s Bay Co. as a fur-trading post
+        known as Fort Camosun; it was later renamed Fort Victoria to honour the English queen. It
+        was selected as the capital in 1866 when Vancouver Island united with British Columbia. It
+        is now one of the province’s largest business centres and a tourist resort and retirement
+        community. A major port, it is the Pacific headquarters of the Canadian navy.</string>
+
+
+</resources>
